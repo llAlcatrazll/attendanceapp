@@ -1,8 +1,8 @@
 import 'package:attendanceapp/profile_page.dart';
 import 'package:flutter/material.dart';
-
 import 'home_page.dart';
 
+//source control for git update
 void main() {
   runApp(const MyApp());
 }
@@ -70,8 +70,8 @@ body: pages[currentPage]
         },
         child: const Icon(Icons.add),
       ),
-*/
-    /*
+
+    
       bottomNavigationBar: NavigationBar(
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),

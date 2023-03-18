@@ -12,16 +12,156 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
   bool? isCheckbox = false;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('CCIS Records'),
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          icon: const Icon(Icons.arrow_back_rounded),
-        ),
+    return Container(
+      width: double.infinity,
+      decoration: const BoxDecoration(
+        color: Color(0xffffffff),
+        image: DecorationImage(
+            alignment: Alignment.center,
+            fit: BoxFit.fill,
+            image: AssetImage("images/darkblue.jpg")),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            margin: const EdgeInsets.fromLTRB(18, 18, 18, 18),
+            width: double.infinity,
+            height: 275.56,
+            color: Colors.white, // removable and changeable
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  margin: const EdgeInsets.fromLTRB(0, 0, 32, 0),
+                  width: 400,
+                  height: double.infinity,
+                  color: Colors.amber, // removable and changeable
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(40, 10, 15, 0),
+                        width: 240,
+                        height: 42,
+                        color: Colors.blue,
+                        child: const Center(
+                          child: Text(
+                            'Attendance System',
+                            style: TextStyle(
+                                decoration: TextDecoration.none,
+                                color: Colors.black,
+                                fontSize: 25,
+                                fontWeight: FontWeight.w800),
+                          ),
+                        ), // removable and changeable
+                      ),
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(5, 15, 5, 5),
+                        width: double.infinity,
+                        height: 130,
+                        color: Colors.deepOrange, // removable and changeable
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              margin: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+                              width: 130,
+                              height: 130,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(100),
+                                border: Border.all(color: Colors.indigo),
+                                image: const DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: AssetImage("images/profpic.jpg"),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              margin: const EdgeInsets.fromLTRB(0, 10, 10, 5),
+                              height: double.infinity,
+                              width: 240,
+                              color: Colors.amberAccent,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    margin:
+                                        const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                    height: 85,
+                                    width: double.infinity,
+                                    color: Colors.blueGrey,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          margin: const EdgeInsets.fromLTRB(
+                                              0, 0, 0, 0),
+                                          width: double.infinity,
+                                          height: 50,
+                                          color: Colors.red,
+                                          child: const Center(
+                                            child: Text(
+                                              'Alexis P. Magaway Jr.',
+                                              style: TextStyle(
+                                                  decoration:
+                                                      TextDecoration.none,
+                                                  color: Colors.black,
+                                                  fontSize: 25,
+                                                  fontWeight: FontWeight.w800),
+                                            ),
+                                          ),
+                                        ),
+                                        const Text(
+                                          'Second Year Student',
+                                          style: TextStyle(
+                                              decoration: TextDecoration.none,
+                                              color: Colors.black,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.w600),
+                                        )
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(0, 0, 18, 0),
+                        width: 240,
+                        height: 30,
+                        decoration: BoxDecoration(
+                          color: Colors.white10,
+                          borderRadius: BorderRadius.circular(30),
+                          boxShadow: const [
+                            BoxShadow(
+                                color: Colors.red,
+                                offset: Offset(.2, .2),
+                                blurRadius: .2),
+                          ],
+                        ),
+                        child: const Center(
+                          child: Text(
+                            'Computer Science',
+                            style: TextStyle(
+                                decoration: TextDecoration
+                                    .none, // to remove the double yellow underline just put decoration to none
+                                color: Colors.black,
+                                fontSize: 20),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
