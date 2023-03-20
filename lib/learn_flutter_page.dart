@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LearnFLutterPage extends StatefulWidget {
   const LearnFLutterPage({super.key});
@@ -15,11 +16,12 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
     return Container(
       width: double.infinity,
       decoration: const BoxDecoration(
-        color: Color(0xffffffff),
-        image: DecorationImage(
-            alignment: Alignment.center,
-            fit: BoxFit.fill,
-            image: AssetImage("images/darkblue.jpg")),
+        color: Colors.black87,
+        //image: DecorationImage(
+        //    alignment: Alignment.center,
+        //  fit: BoxFit.fill,
+        //  color: Colors.black54,)
+        //image: AssetImage("images/darkblue.jpg")),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -27,7 +29,7 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
           Container(
             margin: const EdgeInsets.fromLTRB(18, 18, 18, 18),
             width: double.infinity,
-            height: 275.56,
+            height: 240,
             color: Colors.white, // removable and changeable
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,11 +47,12 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                         width: 240,
                         height: 42,
                         color: Colors.blue,
-                        child: const Center(
+                        child: Center(
                           child: Text(
+                            //pag header title
                             'Attendance System',
-                            style: TextStyle(
-                                decoration: TextDecoration.none,
+                            style: GoogleFonts.merriweather(
+                                decoration: TextDecoration.none, // remove const
                                 color: Colors.black,
                                 fontSize: 25,
                                 fontWeight: FontWeight.w800),
@@ -101,24 +104,26 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                                           width: double.infinity,
                                           height: 50,
                                           color: Colors.red,
-                                          child: const Center(
+                                          child: Center(
                                             child: Text(
+                                              //student name
                                               'Alexis P. Magaway Jr.',
-                                              style: TextStyle(
+                                              style: GoogleFonts.roboto(
                                                   decoration:
                                                       TextDecoration.none,
                                                   color: Colors.black,
                                                   fontSize: 25,
-                                                  fontWeight: FontWeight.w800),
+                                                  fontWeight: FontWeight.w600),
                                             ),
                                           ),
                                         ),
-                                        const Text(
+                                        Text(
+                                          //student year
                                           'Second Year Student',
-                                          style: TextStyle(
+                                          style: GoogleFonts.roboto(
                                               decoration: TextDecoration.none,
                                               color: Colors.black,
-                                              fontSize: 20,
+                                              fontSize: 18,
                                               fontWeight: FontWeight.w600),
                                         )
                                       ],
@@ -146,6 +151,7 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                         ),
                         child: const Center(
                           child: Text(
+                            //student course
                             'Computer Science',
                             style: TextStyle(
                                 decoration: TextDecoration
@@ -161,11 +167,467 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
               ],
             ),
           ),
+          Container(
+            //001
+            margin: const EdgeInsets.fromLTRB(60, 0, 0, 15),
+            width: double.infinity,
+            height: 160,
+            // color: Colors.red,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                  padding: const EdgeInsets.fromLTRB(5, 10, 5, 0),
+                  width: 160,
+                  height: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.black45,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0, 0),
+                        blurRadius: 1,
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+                        width: double.infinity,
+                        height: 140,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              margin: const EdgeInsets.fromLTRB(0, 0, 0, 24),
+                              padding: const EdgeInsets.fromLTRB(1, 1, 1, 1),
+                              width: 120,
+                              height: 90,
+                              decoration: BoxDecoration(
+                                // color: Colors.grey, //icon size
+                                borderRadius: BorderRadius.circular(50),
+                                boxShadow: const [
+                                  BoxShadow(
+                                      color: Colors.black45,
+                                      offset: Offset(0, 1),
+                                      blurRadius: 1)
+                                ],
+                              ),
+                              child: const Center(
+                                child: SizedBox(
+                                  width: 300,
+                                  height: 300,
+                                  child: Icon(
+                                    Icons.business_center,
+                                    color: Colors.cyan,
+                                    size: 100,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Text(
+                              'Attendance Records',
+                              style: GoogleFonts.roboto(
+                                decoration: TextDecoration.none,
+                                fontSize: 16,
+                                height: 1,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.grey.shade400,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  //002
+                  padding: const EdgeInsets.fromLTRB(15, 5, 15, 15),
+                  width: 160,
+                  height: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.black45,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0, 0),
+                        blurRadius: 1,
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
+                        width: double.infinity,
+                        height: 140,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              margin: const EdgeInsets.fromLTRB(0, 5, 0, 24),
+                              padding: const EdgeInsets.fromLTRB(1, 1, 1, 1),
+                              width: 120,
+                              height: 90,
+                              decoration: BoxDecoration(
+                                // color: Colors.grey, //icon size
+                                borderRadius: BorderRadius.circular(50),
+                                boxShadow: const [
+                                  BoxShadow(
+                                      color: Colors.black45,
+                                      offset: Offset(0, 1),
+                                      blurRadius: 1)
+                                ],
+                              ),
+                              child: const Center(
+                                child: SizedBox(
+                                  width: 300,
+                                  height: 300,
+                                  child: Icon(
+                                    Icons.gavel_rounded,
+                                    color: Colors.cyan,
+                                    size: 100,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Text(
+                              'Sanction Records',
+                              style: GoogleFonts.roboto(
+                                decoration: TextDecoration.none,
+                                fontSize: 16,
+                                height: 1,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.grey.shade400,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            //003
+            margin: const EdgeInsets.fromLTRB(60, 0, 0, 15),
+            width: double.infinity,
+            height: 160,
+            //color: Colors.red,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                  padding: const EdgeInsets.fromLTRB(5, 10, 5, 0),
+                  width: 160,
+                  height: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.black45,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0, 0),
+                        blurRadius: 1,
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+                        width: double.infinity,
+                        height: 140,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              margin: const EdgeInsets.fromLTRB(0, 0, 0, 24),
+                              padding: const EdgeInsets.fromLTRB(1, 1, 1, 1),
+                              width: 120,
+                              height: 90,
+                              decoration: BoxDecoration(
+                                // color: Colors.grey, //icon size
+                                borderRadius: BorderRadius.circular(50),
+                                boxShadow: const [
+                                  BoxShadow(
+                                      color: Colors.black45,
+                                      offset: Offset(0, 1),
+                                      blurRadius: 1)
+                                ],
+                              ),
+                              child: const Center(
+                                child: SizedBox(
+                                  width: 300,
+                                  height: 300,
+                                  child: Icon(
+                                    Icons.edit_document,
+                                    color: Colors.cyan,
+                                    size: 100,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Text(
+                              'Attendance Report',
+                              style: GoogleFonts.roboto(
+                                decoration: TextDecoration.none,
+                                fontSize: 16,
+                                height: 1,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.grey.shade400,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  //004
+                  padding: const EdgeInsets.fromLTRB(15, 5, 15, 15),
+                  width: 160,
+                  height: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.black45,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0, 0),
+                        blurRadius: 1,
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
+                        width: double.infinity,
+                        height: 140,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              margin: const EdgeInsets.fromLTRB(0, 5, 0, 24),
+                              padding: const EdgeInsets.fromLTRB(1, 1, 1, 1),
+                              width: 120,
+                              height: 90,
+                              decoration: BoxDecoration(
+                                // color: Colors.grey, //icon size
+                                borderRadius: BorderRadius.circular(50),
+                                boxShadow: const [
+                                  BoxShadow(
+                                      color: Colors.black45,
+                                      offset: Offset(0, 1),
+                                      blurRadius: 1)
+                                ],
+                              ),
+                              child: const Center(
+                                child: SizedBox(
+                                  width: 300,
+                                  height: 300,
+                                  child: Icon(
+                                    Icons.qr_code_scanner_rounded,
+                                    color: Colors.cyan,
+                                    size: 100,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Text(
+                              'Qr Scanner',
+                              style: GoogleFonts.roboto(
+                                decoration: TextDecoration.none,
+                                fontSize: 16,
+                                height: 1,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.grey.shade400,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            //005
+            margin: const EdgeInsets.fromLTRB(60, 0, 0, 15),
+            width: double.infinity,
+            height: 160,
+            //color: Colors.red,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                  padding: const EdgeInsets.fromLTRB(5, 10, 5, 0),
+                  width: 160,
+                  height: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.black45,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0, 0),
+                        blurRadius: 1,
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+                        width: double.infinity,
+                        height: 140,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              margin: const EdgeInsets.fromLTRB(0, 0, 0, 24),
+                              padding: const EdgeInsets.fromLTRB(1, 1, 1, 1),
+                              width: 120,
+                              height: 90,
+                              decoration: BoxDecoration(
+                                // color: Colors.grey, //icon size
+                                borderRadius: BorderRadius.circular(50),
+                                boxShadow: const [
+                                  BoxShadow(
+                                      color: Colors.black45,
+                                      offset: Offset(0, 1),
+                                      blurRadius: 1)
+                                ],
+                              ),
+                              child: const Center(
+                                child: SizedBox(
+                                  width: 300,
+                                  height: 300,
+                                  child: Icon(
+                                    Icons.business_center,
+                                    color: Colors.cyan,
+                                    size: 100,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Text(
+                              'Student Records',
+                              style: GoogleFonts.roboto(
+                                decoration: TextDecoration.none,
+                                fontSize: 16,
+                                height: 1,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.grey.shade400,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  //006
+                  padding: const EdgeInsets.fromLTRB(15, 5, 15, 15),
+                  width: 160,
+                  height: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.black45,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(0, 0),
+                        blurRadius: 1,
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
+                        width: double.infinity,
+                        height: 140,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              margin: const EdgeInsets.fromLTRB(0, 5, 0, 24),
+                              padding: const EdgeInsets.fromLTRB(1, 1, 1, 1),
+                              width: 120,
+                              height: 90,
+                              decoration: BoxDecoration(
+                                // color: Colors.grey, //icon size
+                                borderRadius: BorderRadius.circular(50),
+                                boxShadow: const [
+                                  BoxShadow(
+                                      color: Colors.black45,
+                                      offset: Offset(0, 1),
+                                      blurRadius: 1)
+                                ],
+                              ),
+                              child: const Center(
+                                child: SizedBox(
+                                  width: 300,
+                                  height: 300,
+                                  child: Icon(
+                                    Icons.business_center,
+                                    color: Colors.cyan,
+                                    size: 100,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Text(
+                              'Qr Scanner',
+                              style: GoogleFonts.roboto(
+                                decoration: TextDecoration.none,
+                                fontSize: 16,
+                                height: 1,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.grey.shade400,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
   }
-}/*
+} /*
       body: SingleChildScrollView(
         child: Column(
           children: [
