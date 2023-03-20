@@ -1,3 +1,6 @@
+import 'package:attendanceapp/attendancerecords.dart';
+import 'package:attendanceapp/attendancereport.dart';
+import 'package:attendanceapp/sanctionrecords.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -30,7 +33,12 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
             margin: const EdgeInsets.fromLTRB(18, 18, 18, 18),
             width: double.infinity,
             height: 240,
-            color: Colors.white, // removable and changeable
+            //color: Colors.black54, // removable and changeable
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+              border: Border.all(color: Colors.black26),
+              color: Colors.white10,
+            ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -38,7 +46,7 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                   margin: const EdgeInsets.fromLTRB(0, 0, 32, 0),
                   width: 400,
                   height: double.infinity,
-                  color: Colors.amber, // removable and changeable
+                  // color: Colors.amber, // top size
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
@@ -46,14 +54,14 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                         margin: const EdgeInsets.fromLTRB(40, 10, 15, 0),
                         width: 240,
                         height: 42,
-                        color: Colors.blue,
+                        //color: Colors.blue,
                         child: Center(
                           child: Text(
                             //pag header title
                             'Attendance System',
                             style: GoogleFonts.merriweather(
                                 decoration: TextDecoration.none, // remove const
-                                color: Colors.black,
+                                color: Colors.white,
                                 fontSize: 25,
                                 fontWeight: FontWeight.w800),
                           ),
@@ -63,7 +71,7 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                         margin: const EdgeInsets.fromLTRB(5, 15, 5, 5),
                         width: double.infinity,
                         height: 130,
-                        color: Colors.deepOrange, // removable and changeable
+                        // color: Colors.deepOrange, // pfp image size
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -73,7 +81,7 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                               height: 130,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(100),
-                                border: Border.all(color: Colors.indigo),
+                                border: Border.all(color: Colors.black54),
                                 image: const DecorationImage(
                                   fit: BoxFit.cover,
                                   image: AssetImage("images/profpic.jpg"),
@@ -84,7 +92,7 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                               margin: const EdgeInsets.fromLTRB(0, 10, 10, 5),
                               height: double.infinity,
                               width: 240,
-                              color: Colors.amberAccent,
+                              //color: Colors.amberAccent,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -93,7 +101,7 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                                         const EdgeInsets.fromLTRB(0, 0, 0, 0),
                                     height: 85,
                                     width: double.infinity,
-                                    color: Colors.blueGrey,
+                                    //color: Colors.blueGrey,
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
@@ -103,7 +111,7 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                                               0, 0, 0, 0),
                                           width: double.infinity,
                                           height: 50,
-                                          color: Colors.red,
+                                          //color: Colors.red,
                                           child: Center(
                                             child: Text(
                                               //student name
@@ -111,7 +119,7 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                                               style: GoogleFonts.roboto(
                                                   decoration:
                                                       TextDecoration.none,
-                                                  color: Colors.black,
+                                                  color: Colors.white,
                                                   fontSize: 25,
                                                   fontWeight: FontWeight.w600),
                                             ),
@@ -122,7 +130,7 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                                           'Second Year Student',
                                           style: GoogleFonts.roboto(
                                               decoration: TextDecoration.none,
-                                              color: Colors.black,
+                                              color: Colors.white,
                                               fontSize: 18,
                                               fontWeight: FontWeight.w600),
                                         )
@@ -140,11 +148,11 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                         width: 240,
                         height: 30,
                         decoration: BoxDecoration(
-                          color: Colors.white10,
+                          color: Colors.black45,
                           borderRadius: BorderRadius.circular(30),
                           boxShadow: const [
                             BoxShadow(
-                                color: Colors.red,
+                                color: Colors.grey,
                                 offset: Offset(.2, .2),
                                 blurRadius: .2),
                           ],
@@ -156,7 +164,7 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                             style: TextStyle(
                                 decoration: TextDecoration
                                     .none, // to remove the double yellow underline just put decoration to none
-                                color: Colors.black,
+                                color: Colors.white,
                                 fontSize: 20),
                           ),
                         ),
@@ -168,21 +176,20 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
             ),
           ),
           Container(
-            //001
             margin: const EdgeInsets.fromLTRB(60, 0, 0, 15),
             width: double.infinity,
             height: 160,
-            // color: Colors.red,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  padding: const EdgeInsets.fromLTRB(5, 10, 5, 0),
+                  //001
+                  margin: const EdgeInsets.fromLTRB(20, 0, 3, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                   width: 160,
                   height: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.black45,
+                    color: Colors.black54,
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: const [
                       BoxShadow(
@@ -197,19 +204,20 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                     children: [
                       Container(
                         margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                         width: double.infinity,
                         height: 140,
+                        //color: Colors.red,//inner box
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                              margin: const EdgeInsets.fromLTRB(0, 0, 0, 24),
+                              margin: const EdgeInsets.fromLTRB(0, 0, 0, 10),
                               padding: const EdgeInsets.fromLTRB(1, 1, 1, 1),
-                              width: 120,
-                              height: 90,
+                              width: 130,
+                              height: 100,
                               decoration: BoxDecoration(
-                                // color: Colors.grey, //icon size
+                                //color: Colors.grey, //icon size
                                 borderRadius: BorderRadius.circular(50),
                                 boxShadow: const [
                                   BoxShadow(
@@ -218,28 +226,50 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                                       blurRadius: 1)
                                 ],
                               ),
-                              child: const Center(
-                                child: SizedBox(
-                                  width: 300,
-                                  height: 300,
-                                  child: Icon(
-                                    Icons.business_center,
-                                    color: Colors.cyan,
-                                    size: 100,
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Center(
+                                  child: SizedBox(
+                                    width: 300,
+                                    height: 300,
+                                    child: IconButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const attendancerecords()),
+                                        );
+                                      },
+                                      icon: const Icon(
+                                        Icons.business_center,
+                                        color: Colors.cyan,
+                                        size: 100,
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                            Text(
-                              'Attendance Records',
-                              style: GoogleFonts.roboto(
-                                decoration: TextDecoration.none,
-                                fontSize: 16,
-                                height: 1,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.grey.shade400,
-                              ),
-                            ),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const attendancerecords()),
+                                );
+                                debugPrint('attendance is working');
+                              },
+                              style: TextButton.styleFrom(
+                                  foregroundColor: Colors.grey.shade400,
+                                  textStyle: GoogleFonts.roboto(
+                                      fontSize: 15,
+                                      height: 1,
+                                      fontWeight: FontWeight.w800,
+                                      color: Colors.grey.shade400)),
+                              child: const Text('Attendance Records'),
+                            )
                           ],
                         ),
                       ),
@@ -248,11 +278,12 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                 ),
                 Container(
                   //002
-                  padding: const EdgeInsets.fromLTRB(15, 5, 15, 15),
+                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                   width: 160,
                   height: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.black45,
+                    color: Colors.black54,
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: const [
                       BoxShadow(
@@ -267,19 +298,20 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                     children: [
                       Container(
                         margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                         width: double.infinity,
                         height: 140,
+                        //color: Colors.red,//inner box
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                              margin: const EdgeInsets.fromLTRB(0, 5, 0, 24),
+                              margin: const EdgeInsets.fromLTRB(0, 0, 0, 10),
                               padding: const EdgeInsets.fromLTRB(1, 1, 1, 1),
-                              width: 120,
-                              height: 90,
+                              width: 130,
+                              height: 100,
                               decoration: BoxDecoration(
-                                // color: Colors.grey, //icon size
+                                //color: Colors.grey, //icon size
                                 borderRadius: BorderRadius.circular(50),
                                 boxShadow: const [
                                   BoxShadow(
@@ -288,28 +320,50 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                                       blurRadius: 1)
                                 ],
                               ),
-                              child: const Center(
-                                child: SizedBox(
-                                  width: 300,
-                                  height: 300,
-                                  child: Icon(
-                                    Icons.gavel_rounded,
-                                    color: Colors.cyan,
-                                    size: 100,
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Center(
+                                  child: SizedBox(
+                                    width: 300,
+                                    height: 300,
+                                    child: IconButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const sanctionrecords()),
+                                        );
+                                      },
+                                      icon: const Icon(
+                                        Icons.gavel_rounded,
+                                        color: Colors.cyan,
+                                        size: 100,
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                            Text(
-                              'Sanction Records',
-                              style: GoogleFonts.roboto(
-                                decoration: TextDecoration.none,
-                                fontSize: 16,
-                                height: 1,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.grey.shade400,
-                              ),
-                            ),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const sanctionrecords()),
+                                );
+                                debugPrint('attendance is working');
+                              },
+                              style: TextButton.styleFrom(
+                                  foregroundColor: Colors.grey.shade400,
+                                  textStyle: GoogleFonts.roboto(
+                                      fontSize: 15,
+                                      height: 1,
+                                      fontWeight: FontWeight.w800,
+                                      color: Colors.grey.shade400)),
+                              child: const Text('Sanction Records'),
+                            )
                           ],
                         ),
                       ),
@@ -324,17 +378,16 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
             margin: const EdgeInsets.fromLTRB(60, 0, 0, 15),
             width: double.infinity,
             height: 160,
-            //color: Colors.red,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  padding: const EdgeInsets.fromLTRB(5, 10, 5, 0),
+                  margin: const EdgeInsets.fromLTRB(20, 0, 3, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                   width: 160,
                   height: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.black45,
+                    color: Colors.black54,
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: const [
                       BoxShadow(
@@ -349,19 +402,20 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                     children: [
                       Container(
                         margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                         width: double.infinity,
                         height: 140,
+                        //color: Colors.red,//inner box
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                              margin: const EdgeInsets.fromLTRB(0, 0, 0, 24),
+                              margin: const EdgeInsets.fromLTRB(0, 0, 0, 10),
                               padding: const EdgeInsets.fromLTRB(1, 1, 1, 1),
-                              width: 120,
-                              height: 90,
+                              width: 130,
+                              height: 100,
                               decoration: BoxDecoration(
-                                // color: Colors.grey, //icon size
+                                //color: Colors.grey, //icon size
                                 borderRadius: BorderRadius.circular(50),
                                 boxShadow: const [
                                   BoxShadow(
@@ -370,28 +424,50 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                                       blurRadius: 1)
                                 ],
                               ),
-                              child: const Center(
-                                child: SizedBox(
-                                  width: 300,
-                                  height: 300,
-                                  child: Icon(
-                                    Icons.edit_document,
-                                    color: Colors.cyan,
-                                    size: 100,
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Center(
+                                  child: SizedBox(
+                                    width: 300,
+                                    height: 300,
+                                    child: IconButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const attendancereport()),
+                                        );
+                                      },
+                                      icon: const Icon(
+                                        Icons.file_copy_rounded,
+                                        color: Colors.cyan,
+                                        size: 100,
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                            Text(
-                              'Attendance Report',
-                              style: GoogleFonts.roboto(
-                                decoration: TextDecoration.none,
-                                fontSize: 16,
-                                height: 1,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.grey.shade400,
-                              ),
-                            ),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const attendancereport()),
+                                );
+                                debugPrint('report is working');
+                              },
+                              style: TextButton.styleFrom(
+                                  foregroundColor: Colors.grey.shade400,
+                                  textStyle: GoogleFonts.roboto(
+                                      fontSize: 15,
+                                      height: 1,
+                                      fontWeight: FontWeight.w800,
+                                      color: Colors.grey.shade400)),
+                              child: const Text('Attendance Report'),
+                            )
                           ],
                         ),
                       ),
@@ -400,11 +476,12 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                 ),
                 Container(
                   //004
-                  padding: const EdgeInsets.fromLTRB(15, 5, 15, 15),
+                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                   width: 160,
                   height: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.black45,
+                    color: Colors.black54,
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: const [
                       BoxShadow(
@@ -419,19 +496,20 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                     children: [
                       Container(
                         margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                         width: double.infinity,
                         height: 140,
+                        //color: Colors.red,//inner box
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                              margin: const EdgeInsets.fromLTRB(0, 5, 0, 24),
+                              margin: const EdgeInsets.fromLTRB(0, 0, 0, 10),
                               padding: const EdgeInsets.fromLTRB(1, 1, 1, 1),
-                              width: 120,
-                              height: 90,
+                              width: 130,
+                              height: 100,
                               decoration: BoxDecoration(
-                                // color: Colors.grey, //icon size
+                                //color: Colors.grey, //icon size
                                 borderRadius: BorderRadius.circular(50),
                                 boxShadow: const [
                                   BoxShadow(
@@ -440,28 +518,50 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                                       blurRadius: 1)
                                 ],
                               ),
-                              child: const Center(
-                                child: SizedBox(
-                                  width: 300,
-                                  height: 300,
-                                  child: Icon(
-                                    Icons.qr_code_scanner_rounded,
-                                    color: Colors.cyan,
-                                    size: 100,
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Center(
+                                  child: SizedBox(
+                                    width: 300,
+                                    height: 300,
+                                    child: IconButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const attendancerecords()),
+                                        );
+                                      },
+                                      icon: const Icon(
+                                        Icons.qr_code_scanner_rounded,
+                                        color: Colors.cyan,
+                                        size: 100,
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                            Text(
-                              'Qr Scanner',
-                              style: GoogleFonts.roboto(
-                                decoration: TextDecoration.none,
-                                fontSize: 16,
-                                height: 1,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.grey.shade400,
-                              ),
-                            ),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const attendancerecords()),
+                                );
+                                debugPrint('qr is working');
+                              },
+                              style: TextButton.styleFrom(
+                                  foregroundColor: Colors.grey.shade400,
+                                  textStyle: GoogleFonts.roboto(
+                                      fontSize: 15,
+                                      height: 1,
+                                      fontWeight: FontWeight.w800,
+                                      color: Colors.grey.shade400)),
+                              child: const Text('Qr Scanner'),
+                            )
                           ],
                         ),
                       ),
@@ -476,17 +576,16 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
             margin: const EdgeInsets.fromLTRB(60, 0, 0, 15),
             width: double.infinity,
             height: 160,
-            //color: Colors.red,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-                  padding: const EdgeInsets.fromLTRB(5, 10, 5, 0),
+                  margin: const EdgeInsets.fromLTRB(20, 0, 3, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                   width: 160,
                   height: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.black45,
+                    color: Colors.black54,
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: const [
                       BoxShadow(
@@ -501,19 +600,20 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                     children: [
                       Container(
                         margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                         width: double.infinity,
                         height: 140,
+                        //color: Colors.red,//inner box
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                              margin: const EdgeInsets.fromLTRB(0, 0, 0, 24),
+                              margin: const EdgeInsets.fromLTRB(0, 0, 0, 10),
                               padding: const EdgeInsets.fromLTRB(1, 1, 1, 1),
-                              width: 120,
-                              height: 90,
+                              width: 130,
+                              height: 100,
                               decoration: BoxDecoration(
-                                // color: Colors.grey, //icon size
+                                //color: Colors.grey, //icon size
                                 borderRadius: BorderRadius.circular(50),
                                 boxShadow: const [
                                   BoxShadow(
@@ -522,28 +622,50 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                                       blurRadius: 1)
                                 ],
                               ),
-                              child: const Center(
-                                child: SizedBox(
-                                  width: 300,
-                                  height: 300,
-                                  child: Icon(
-                                    Icons.business_center,
-                                    color: Colors.cyan,
-                                    size: 100,
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Center(
+                                  child: SizedBox(
+                                    width: 300,
+                                    height: 300,
+                                    child: IconButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const attendancerecords()),
+                                        );
+                                      },
+                                      icon: const Icon(
+                                        Icons.print,
+                                        color: Colors.cyan,
+                                        size: 100,
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                            Text(
-                              'Student Records',
-                              style: GoogleFonts.roboto(
-                                decoration: TextDecoration.none,
-                                fontSize: 16,
-                                height: 1,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.grey.shade400,
-                              ),
-                            ),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const attendancerecords()),
+                                );
+                                debugPrint('placeholder1 is working');
+                              },
+                              style: TextButton.styleFrom(
+                                  foregroundColor: Colors.grey.shade400,
+                                  textStyle: GoogleFonts.roboto(
+                                      fontSize: 15,
+                                      height: 1,
+                                      fontWeight: FontWeight.w800,
+                                      color: Colors.grey.shade400)),
+                              child: const Text('Placeholder'),
+                            )
                           ],
                         ),
                       ),
@@ -552,11 +674,12 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                 ),
                 Container(
                   //006
-                  padding: const EdgeInsets.fromLTRB(15, 5, 15, 15),
+                  margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                   width: 160,
                   height: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.black45,
+                    color: Colors.black54,
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: const [
                       BoxShadow(
@@ -571,19 +694,20 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                     children: [
                       Container(
                         margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                         width: double.infinity,
                         height: 140,
+                        //color: Colors.red,//inner box
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                              margin: const EdgeInsets.fromLTRB(0, 5, 0, 24),
+                              margin: const EdgeInsets.fromLTRB(0, 0, 0, 10),
                               padding: const EdgeInsets.fromLTRB(1, 1, 1, 1),
-                              width: 120,
-                              height: 90,
+                              width: 130,
+                              height: 100,
                               decoration: BoxDecoration(
-                                // color: Colors.grey, //icon size
+                                //color: Colors.grey, //icon size
                                 borderRadius: BorderRadius.circular(50),
                                 boxShadow: const [
                                   BoxShadow(
@@ -592,28 +716,50 @@ class _LearnFLutterPageState extends State<LearnFLutterPage> {
                                       blurRadius: 1)
                                 ],
                               ),
-                              child: const Center(
-                                child: SizedBox(
-                                  width: 300,
-                                  height: 300,
-                                  child: Icon(
-                                    Icons.business_center,
-                                    color: Colors.cyan,
-                                    size: 100,
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Center(
+                                  child: SizedBox(
+                                    width: 300,
+                                    height: 300,
+                                    child: IconButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const attendancerecords()),
+                                        );
+                                      },
+                                      icon: const Icon(
+                                        Icons.settings,
+                                        color: Colors.cyan,
+                                        size: 100,
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                            Text(
-                              'Qr Scanner',
-                              style: GoogleFonts.roboto(
-                                decoration: TextDecoration.none,
-                                fontSize: 16,
-                                height: 1,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.grey.shade400,
-                              ),
-                            ),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const attendancerecords()),
+                                );
+                                debugPrint('placeholder2 is working');
+                              },
+                              style: TextButton.styleFrom(
+                                  foregroundColor: Colors.grey.shade400,
+                                  textStyle: GoogleFonts.roboto(
+                                      fontSize: 15,
+                                      height: 1,
+                                      fontWeight: FontWeight.w800,
+                                      color: Colors.grey.shade400)),
+                              child: const Text('Placeholder'),
+                            )
                           ],
                         ),
                       ),
