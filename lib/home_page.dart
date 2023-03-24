@@ -1,4 +1,4 @@
-import 'package:attendanceapp/learn_flutter_page.dart';
+import 'package:attendanceapp/attendancerecords.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const LearnFLutterPage()),
+            MaterialPageRoute(builder: (context) => const attendancerecords()),
           );
         },
         child: const Text(
