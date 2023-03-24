@@ -19,10 +19,23 @@ class _attendancerecordsState extends State<attendancerecords> {
   String home = 'Alexis P. Magaway Jr.';
   String studentname = 'Sven Magnus Carlsen';
   String facebook = '@GMCarlsen';
-  String address = 'San Agustin';
-  String housenumber = '0040';
-  String city = 'Digos City';
+  String address = 'Holmenkollen';
+  String housenumber = '143';
+  String city = 'Oslo';
+  String studentcourse = 'Computer Science';
+  String sutdentyear = '4th Year';
+//i will shorten the code later by using constant values later to be asily adjustable
+/*
+ctrl + ff
 
+001
+
+002 
+
+003 is search 
+
+004 is profile page
+*/
   PageController controller = PageController();
 
   List<Color> colors = [
@@ -78,10 +91,16 @@ class _attendancerecordsState extends State<attendancerecords> {
                 //004
                 decoration: const BoxDecoration(color: Colors.black87),
                 child: Container(
-                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 50),
+                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                   height: double.infinity,
                   width: double.infinity,
-                  color: Colors.amber,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("images/mountains.jpg"),
+                      //we can have a custmize porfile bg later
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -89,7 +108,7 @@ class _attendancerecordsState extends State<attendancerecords> {
                         margin: const EdgeInsets.fromLTRB(50, 10, 50, 0),
                         width: double.infinity,
                         height: 680,
-                        color: Colors.red,
+                        // color: Colors.red,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -97,7 +116,7 @@ class _attendancerecordsState extends State<attendancerecords> {
                               padding: const EdgeInsets.fromLTRB(5, 5, 5, 5),
                               width: double.infinity,
                               height: 600,
-                              color: Colors.pink,
+                              //  color: Colors.pink,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
@@ -114,30 +133,20 @@ class _attendancerecordsState extends State<attendancerecords> {
                                         image: AssetImage("images/magnus.jpg"),
                                       ),
                                     ),
-                                    /*  child: Center(
-                                      child: SizedBox(
-                                        width: 280,
-                                        height: 280,
-                                        child: Image.network(
-                                            fit: BoxFit.cover,
-                                            ("images/profpic.jpg")),
-                                      ),
-                                    ),
-                                  */
                                   ),
                                   Container(
                                     margin:
                                         const EdgeInsets.fromLTRB(0, 0, 0, 4),
                                     width: double.infinity,
-                                    height: 150,
-                                    color: Colors.red,
+                                    height: 254,
+                                    //color: Colors.purple,
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
                                         Container(
                                           margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 0, 6),
+                                              0, 0, 0, 0),
                                           child: Text(studentname.toUpperCase(),
                                               style: GoogleFonts.inter(
                                                   decoration:
@@ -164,10 +173,10 @@ class _attendancerecordsState extends State<attendancerecords> {
                                               0, 0, 0, 0),
                                           width: double.infinity,
                                           height: 40,
-                                          color: Colors.orange,
+                                          //  color: Colors.orange,
                                           child: Center(
                                             child: Text(
-                                              '$housenumber|$address|$city',
+                                              ' $housenumber | $address | $city ',
                                               style: GoogleFonts.inter(
                                                   decoration:
                                                       TextDecoration.none,
@@ -177,9 +186,258 @@ class _attendancerecordsState extends State<attendancerecords> {
                                             ),
                                           ),
                                         ),
+                                        Center(
+                                          child: Container(
+                                            margin: const EdgeInsets.fromLTRB(
+                                                50, 0, 50, 0),
+                                            width: double.infinity,
+                                            height: 53,
+                                            //  color: Colors.blue,
+                                            child: Row(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              children: [
+                                                Container(
+                                                  margin:
+                                                      const EdgeInsets.fromLTRB(
+                                                          0, 0, 40, 0),
+                                                  width: 70,
+                                                  height: 53,
+                                                  // color: Colors.amberAccent,
+                                                  child: Stack(
+                                                    children: [
+                                                      Positioned(
+                                                        left: 0,
+                                                        top: 0,
+                                                        child: Align(
+                                                          child: SizedBox(
+                                                            width: 70,
+                                                            height: 28,
+                                                            child: Text(
+                                                              '96%',
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .center,
+                                                              style: GoogleFonts.inter(
+                                                                  color: Colors
+                                                                      .white,
+                                                                  fontSize: 28,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w800),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      Positioned(
+                                                        left: 0,
+                                                        top: 40,
+                                                        child: Align(
+                                                          child: SizedBox(
+                                                            width: 70,
+                                                            height: 22,
+                                                            child: Text(
+                                                              'Attendance',
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .center,
+                                                              style: GoogleFonts.inter(
+                                                                  color: Colors
+                                                                      .white,
+                                                                  fontSize: 12,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w800),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                                Container(
+                                                  margin:
+                                                      const EdgeInsets.fromLTRB(
+                                                          0, 0, 40, 0),
+                                                  width: 70,
+                                                  height: 53,
+                                                  // color: Colors.blueGrey,
+                                                  child: Stack(
+                                                    children: [
+                                                      Positioned(
+                                                        left: 0,
+                                                        top: 0,
+                                                        child: Align(
+                                                          child: SizedBox(
+                                                            width: 70,
+                                                            height: 28,
+                                                            child: Text(
+                                                              '13',
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .center,
+                                                              style: GoogleFonts.inter(
+                                                                  color: Colors
+                                                                      .white,
+                                                                  fontSize: 28,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w800),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      Positioned(
+                                                        left: 0,
+                                                        top: 40,
+                                                        child: Align(
+                                                          child: SizedBox(
+                                                            width: 70,
+                                                            height: 22,
+                                                            child: Text(
+                                                              'Events',
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .center,
+                                                              style: GoogleFonts.inter(
+                                                                  color: Colors
+                                                                      .white,
+                                                                  fontSize: 12,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w800),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                                Container(
+                                                  margin:
+                                                      const EdgeInsets.fromLTRB(
+                                                          0, 0, 0, 0),
+                                                  width: 70,
+                                                  height: 53,
+                                                  //  color: Colors.greenAccent,
+                                                  child: Stack(
+                                                    children: [
+                                                      Positioned(
+                                                        left: 0,
+                                                        top: 0,
+                                                        child: Align(
+                                                          child: SizedBox(
+                                                            width: 70,
+                                                            height: 28,
+                                                            child: Text(
+                                                              '42%',
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .center,
+                                                              style: GoogleFonts.inter(
+                                                                  color: Colors
+                                                                      .white,
+                                                                  fontSize: 28,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w800),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      Positioned(
+                                                        left: 0,
+                                                        top: 40,
+                                                        child: Align(
+                                                          child: SizedBox(
+                                                            width: 70,
+                                                            height: 22,
+                                                            child: Text(
+                                                              'Presence',
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .center,
+                                                              style: GoogleFonts.inter(
+                                                                  color: Colors
+                                                                      .white,
+                                                                  fontSize: 12,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w800),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        Container(
+                                          // badges and CS stuff
+                                          margin: const EdgeInsets.fromLTRB(
+                                              0, 0, 0, 0),
+                                          padding: const EdgeInsets.fromLTRB(
+                                              10, 10, 10, 10),
+                                          width: double.infinity,
+                                          height: 80,
+                                          // color: Colors.deepPurple,
+                                          /*  child: Row(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              Container(
+                                                margin:
+                                                    const EdgeInsets.fromLTRB(
+                                                        0, 0, 50, 0),
+                                                width: 160,
+                                                height: double.infinity,
+                                                decoration: BoxDecoration(
+                                                  color: Colors.black38,
+                                                  borderRadius:
+                                                      BorderRadius.circular(20),
+                                                ),
+                                                child: Center(
+                                                  child: Text(
+                                                    studentcourse,
+                                                    style: GoogleFonts.inter(
+                                                      fontSize: 15,
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Container(
+                                                width: 160,
+                                                height: double.infinity,
+                                                decoration: BoxDecoration(
+                                                  color: Colors.black38,
+                                                  borderRadius:
+                                                      BorderRadius.circular(20),
+                                                ),
+                                                child: Center(
+                                                  child: Text(
+                                                    sutdentyear,
+                                                    style: GoogleFonts.inter(
+                                                      fontSize: 15,
+                                                      fontWeight:
+                                                          FontWeight.w800,
+                                                      color: Colors.white,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        */
+                                        ),
                                       ],
                                     ),
-                                  )
+                                  ),
                                 ],
                               ),
                             )
@@ -272,7 +530,7 @@ class _attendancerecordsState extends State<attendancerecords> {
                       iconSize: 24,
                       padding: padding,
                       icon: Icons.airplane_ticket,
-                      text: 'Sheldon',
+                      text: 'Profile',
                     )
                   ],
                   selectedIndex: selectedIndex,
