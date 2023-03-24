@@ -24,6 +24,7 @@ class _attendancerecordsState extends State<attendancerecords> {
   String city = 'Oslo';
   String studentcourse = 'Computer Science';
   String sutdentyear = '4th Year';
+
 //i will shorten the code later by using constant values later to be asily adjustable
 /*
 ctrl + ff
@@ -466,68 +467,69 @@ ctrl + ff
           ),
           bottomNavigationBar: SafeArea(
             child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-              decoration: BoxDecoration(
-                color: Colors.black54,
-                borderRadius: const BorderRadius.all(Radius.circular(100)),
+              margin: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+              decoration: const BoxDecoration(
+                color: Colors.black,
+                borderRadius: BorderRadius.all(Radius.circular(0)),
                 boxShadow: [
                   BoxShadow(
                     spreadRadius: -10,
                     blurRadius: 60,
-                    color: Colors.black.withOpacity(.4),
-                    offset: const Offset(0, 25),
+                    color: Colors.black,
+                    offset: Offset(0, 25),
                   )
                 ],
               ),
               child: Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 3.0, vertical: 3),
+                    const EdgeInsets.symmetric(horizontal: 50, vertical: 0),
                 child: GNav(
+                  backgroundColor: Colors.black,
                   tabs: [
                     GButton(
                       //attendance report
-                      gap: gap,
+
                       iconActiveColor: Colors.cyan,
-                      iconColor: Colors.black,
-                      textColor: Colors.purple,
-                      backgroundColor: Colors.purple.withOpacity(.2),
-                      iconSize: 24,
+                      iconColor: Colors.cyan,
+                      textColor: Colors.white,
+                      backgroundColor: Colors.indigo.withOpacity(.2),
+                      iconSize: 30,
                       padding: padding,
                       icon: Icons.home,
                       text: 'Home',
                     ),
                     GButton(
                       //attendance record
-                      gap: gap,
+
                       iconActiveColor: Colors.cyan,
-                      iconColor: Colors.black,
-                      textColor: Colors.pink,
-                      backgroundColor: Colors.pink.withOpacity(.2),
-                      iconSize: 24,
+                      iconColor: Colors.cyan,
+                      textColor: Colors.white,
+                      backgroundColor: Colors.indigo.withOpacity(.2),
+                      iconSize: 30,
                       padding: padding,
                       icon: Icons.file_copy,
                       text: 'Sheldon',
                     ),
                     GButton(
                       //sanction records
-                      gap: gap,
-                      iconActiveColor: Colors.cyan[600],
-                      iconColor: Colors.black,
-                      textColor: Colors.amber[600],
-                      backgroundColor: Colors.amber[600]!.withOpacity(.2),
-                      iconSize: 24,
+
+                      iconActiveColor: Colors.cyan,
+                      iconColor: Colors.cyan,
+                      textColor: Colors.white,
+                      backgroundColor: Colors.indigo.withOpacity(.2),
+                      iconSize: 30,
                       padding: padding,
                       icon: Icons.search,
                       text: 'Search',
                     ),
                     GButton(
                       //profile
-                      gap: gap,
+
                       iconActiveColor: Colors.cyan,
-                      iconColor: Colors.black,
-                      textColor: Colors.teal,
-                      backgroundColor: Colors.teal.withOpacity(.2),
-                      iconSize: 24,
+                      iconColor: Colors.cyan,
+                      textColor: Colors.white,
+                      backgroundColor: Colors.indigo.withOpacity(.2),
+                      iconSize: 30,
                       padding: padding,
                       icon: Icons.airplane_ticket,
                       text: 'Profile',
