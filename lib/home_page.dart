@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final emailField = TextField(
       style: const TextStyle(
-          fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.bold),
+          fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.w500),
       decoration: InputDecoration(
           contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
           hintText: 'Email',
@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
     final passwordField = TextField(
       obscureText: true,
       style: const TextStyle(
-          fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.bold),
+          fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.w500),
       decoration: InputDecoration(
           contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
           hintText: "Password",
@@ -39,11 +39,11 @@ class HomePage extends StatelessWidget {
 
     final loginButton = Material(
       elevation: 5.0,
-      borderRadius: BorderRadius.circular(.0),
+      borderRadius: BorderRadius.circular(20),
       color: const Color.fromARGB(162, 120, 210, 240),
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
-        padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        padding: const EdgeInsets.fromLTRB(20.0, 15.0, 50.0, 15.0),
         onPressed: () {
           Navigator.push(
             context,
@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
           "Login",
           textAlign: TextAlign.center,
           style: TextStyle(
-              fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.bold),
+              fontSize: 20.0, color: Colors.white, fontWeight: FontWeight.w700),
         ),
       ),
     );
@@ -64,14 +64,14 @@ class HomePage extends StatelessWidget {
         child: SizedBox(
           height: MediaQuery.of(context).size.height / 1.5,
           child: Padding(
-            padding: const EdgeInsets.all(36.0),
+            padding: const EdgeInsets.fromLTRB(36, 36, 30, 0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SizedBox(
-                  height: 216.0,
-                  child: Image.asset("images/ccis.png", fit: BoxFit.contain),
+                  height: 248.0,
+                  child: Image.asset("images/logolowres.png", fit: BoxFit.fill),
                 ),
                 const SizedBox(
                   height: 48.0,

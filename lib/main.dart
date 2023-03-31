@@ -42,12 +42,7 @@ class _RootPageState extends State<RootPage> {
             Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("images/plain.png"),
-                  fit: BoxFit.cover,
-                ),
-              ),
+              decoration: const BoxDecoration(color: Colors.black87),
             ),
             Positioned(
               top: 0,

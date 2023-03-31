@@ -1,3 +1,4 @@
+import 'package:attendanceapp/qridrecords.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -24,18 +25,21 @@ class _attendancerecordsState extends State<attendancerecords> {
   String city = 'Oslo';
   String studentcourse = 'Computer Science';
   String sutdentyear = '4th Year';
+  String gender = 'Male';
 
 //i will shorten the code later by using constant values later to be asily adjustable
 /*
 ctrl + ff
 
-001
+001 -- is the detailed attendance records (temporary data update)
 
-002 
+002 -- is the sanction records
 
-003 is search 
+003 -- is search 
 
-004 is profile page
+004 -- is profile page
+
+flo -- is for the floating action button that navigates your qr code
 */
   PageController controller = PageController();
 
@@ -57,6 +61,18 @@ ctrl + ff
       debugShowCheckedModeBanner: false,
       home: Center(
         child: Scaffold(
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const qridrecord()),
+              );
+            },
+            focusColor: Colors.cyan,
+            autofocus: true,
+            hoverColor: Colors.blue.shade900,
+            child: const Icon(Icons.qr_code_scanner),
+          ),
           body: PageView(
             controller: controller,
             children: [
@@ -65,28 +81,30 @@ ctrl + ff
                 decoration: const BoxDecoration(color: Colors.black87),
                 child: Center(
                   child: Text(
-                    home,
-                    style: const TextStyle(color: Colors.amberAccent),
+                    //to check if the data is being updated or not
+                    'name: $studentname\nfacebook: $facebook\nadress: $address\nhousenumber: $housenumber\ncity: $housenumber\nstudentcourse: $studentcourse\nstudentyear: $sutdentyear\ngender: $gender',
+                    style: const TextStyle(
+                        color: Colors.amberAccent, fontSize: 20),
                   ),
                 ),
               ),
               Container(
                 //002
                 decoration: const BoxDecoration(color: Colors.black87),
-                child: const Center(
-                  child: Text(
-                    'alfmndf',
-                    style: TextStyle(color: Colors.amberAccent),
-                  ),
+                child: ListView.builder(
+                  scrollDirection: Axis.vertical,
+                  shrinkWrap: true,
+                  physics: const BouncingScrollPhysics(),
+                  itemCount: 12,
+                  itemBuilder: (BuildContext context, int index) {
+                    return null;
+                  },
                 ),
               ),
               Container(
                 //003
                 decoration: const BoxDecoration(color: Colors.black87),
-                child: const Text(
-                  'sadasad',
-                  style: TextStyle(color: Colors.cyan),
-                ),
+                child: const Scaffold(),
               ),
               Container(
                 //004
@@ -520,7 +538,7 @@ ctrl + ff
                       iconSize: 30,
                       padding: padding,
                       icon: Icons.search,
-                      text: 'Search',
+                      text: 'Log Out',
                     ),
                     GButton(
                       //profile
