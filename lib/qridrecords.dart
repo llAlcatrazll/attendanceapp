@@ -8,7 +8,7 @@ class qridrecord extends StatelessWidget {
 probably just gonna use the id number for the QR and genrate data from that through 
   sql id matching
 */
-  @override
+  @override 
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(

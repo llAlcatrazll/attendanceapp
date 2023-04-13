@@ -526,7 +526,7 @@ flo -- is for the floating action button that navigates your qr code
                       iconSize: 30,
                       padding: padding,
                       icon: Icons.file_copy,
-                      text: 'Sheldon',
+                      text: 'Attendance Record',
                     ),
                     GButton(
                       //sanction records
@@ -538,7 +538,7 @@ flo -- is for the floating action button that navigates your qr code
                       iconSize: 30,
                       padding: padding,
                       icon: Icons.search,
-                      text: 'Log Out',
+                      text: 'Sanction Records',
                     ),
                     GButton(
                       //profile
